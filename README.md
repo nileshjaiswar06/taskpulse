@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TaskPulse - AI-Powered Interview & Hiring Platform
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
@@ -105,3 +106,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Project Lead**: Nilesh Jaiswar  
 **Email**: nilesh.jaiswar006@gmail.com  
 **GitHub**: [@nileshjaiswar006](https://github.com/nileshjaiswar006)
+=======
+# taskpulse
+>>>>>>> c982ba1b2194fc4c1470d65b9e2843f8681b09e9
