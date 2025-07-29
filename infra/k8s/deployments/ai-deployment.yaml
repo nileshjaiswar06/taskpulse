@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-service
+  template:
+    metadata:
+      labels:
+        app: ai-service
+    spec:
+      containers:
+      - name: ai-service
+        image: taskpulse/ai-service:latest
+        ports:
+        - containerPort: 4006
+        envFrom:
+        - configMapRef:
+            name: ai-config
+        - secretRef:
+            name: ai-secrets
+        resources:
+          limits:
+            cpu: "2"
+            memory: "2Gi"

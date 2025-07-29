@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ats-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ats-service
+  template:
+    metadata:
+      labels:
+        app: ats-service
+    spec:
+      containers:
+      - name: ats-service
+        image: taskpulse/ats-service:latest
+        ports:
+        - containerPort: 4005
+        envFrom:
+        - configMapRef:
+            name: ats-config
+        - secretRef:
+            name: ats-secrets

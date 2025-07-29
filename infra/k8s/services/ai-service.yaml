@@ -1,0 +1,17 @@
+# infra/k8s/services/ai-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-service
+  labels:
+    app: ai-service
+    tier: backend
+spec:
+  type: ClusterIP
+  selector:
+    app: ai-service
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 4006
